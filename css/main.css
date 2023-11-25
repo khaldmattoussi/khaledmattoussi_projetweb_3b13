@@ -1,57 +1,205 @@
-/* Reset some default styles */
+/* Reset styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
   }
   
-  /* Set a background color for the body */
   body {
-    background-color: #3498db; /* Updated to blue */
     font-family: 'Arial', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
-    color: #fff; /* Set text color to white */
   }
   
-  /* Add some spacing to the navigation links */
-  .navigation__list a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #fff; /* Updated to white */
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
+  /* General styling */
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
-  .navigation__list a:hover {
-    color: #e44d26;
-  }
-  
-  /* Style the header */
   .header {
-    background-color: #2980b9; /* Updated to a darker blue */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
   }
   
-  /* Add some padding to the main content */
-  main {
-    padding-top: 80px; /* Adjust the value based on your header height */
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInDown 1s ease-out; /* New animation */
   }
   
-  /* Style the splashscreen */
+  .navigation__list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navigation__list li {
+    margin-right: 20px;
+  }
+  
+  .navigation__list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Splashscreen styles */
   .splashscreen {
     background-color: #3498db;
-    color: #fff;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+    align-items: center;
   }
   
+  .preloader__text {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Presentation section styles */
+  .presentation {
+    text-align: center;
+    animation: fadeInUp 1s ease-out; /* New animation */
+  }
+  
+  .presentation_heading {
+    font-size: 36px;
+    color: #3498db;
+  }
+  
+  /* About section styles */
+  .about {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-out; /* New animation */
+  }
+  
+  .welcome_heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Work section styles */
+  .work {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-out; /* New animation */
+  }
+  
+  .work__heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .work ul {
+    list-style: none;
+  }
+  
+  .work li {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Carousel styles */
+  .carousel {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .carousel__slide {
+    display: none;
+  }
+  
+  .carousel__heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .carousel__text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Contact section styles */
+  .contact {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-out; /* New animation */
+  }
+  
+  .contact__heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .contact__visual img {
+    max-width: 100%;
+  }
+  
+  .contact__form {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .contact__form-el {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .contact__form-el--submit {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navigation__list {
+      margin-top: 10px;
+    }
+  
+    .carousel__slide {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  
+    .contact__wrapper {
+      flex-direction: column;
+    }
+  
+    .contact__form {
+      max-width: none;
+    }
+  }
+  
+  /* New keyframe animations */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -61,154 +209,25 @@ body, h1, h2, h3, p, ul, li {
     }
   }
   
-  .preloader {
-    text-align: center;
-  }
-  
-  .preloader__text {
-    font-size: 24px;
-  }
-  
-  /* Style the presentation section */
-  .presentation {
-    text-align: center;
-    padding: 50px 0;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-  }
-  
-  .presentation_heading {
-    color: #e44d26;
-    font-size: 36px;
-  }
-  
-  .presentation_icon {
-    font-size: 48px;
-    color: #e44d26;
-    margin-top: 20px;
-    animation: spin 2s infinite linear;
-  }
-  
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
   @keyframes fadeInUp {
     from {
+      opacity: 0;
       transform: translateY(20px);
-      opacity: 0;
     }
     to {
+      opacity: 1;
       transform: translateY(0);
-      opacity: 1;
     }
   }
   
-  /* Style the about section */
-  .about {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-  }
-  
-  /* Style the work section */
-  .work {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-  }
-  
-  .work__heading {
-    color: #e44d26;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  .work li {
-    margin-bottom: 20px;
-    text-align: left;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-  }
-  
-  /* Style the footer */
-  .footer {
-    background-color: #2980b9; /* Updated to a darker blue */
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-  }
-  
-  /* Style the contact section */
-  .contact {
-    background-color: #fff;
-    text-align: center;
-    padding: 50px 0;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-  }
-  
-  .contact__heading {
-    color: #e44d26;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  .contact__form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-    opacity: 0;
-    animation: zoomIn 1s forwards;
-  }
-  
-  @keyframes zoomIn {
+  @keyframes fadeInDown {
     from {
-      transform: scale(0.8);
       opacity: 0;
+      transform: translateY(-20px);
     }
     to {
-      transform: scale(1);
       opacity: 1;
+      transform: translateY(0);
     }
   }
-  
-  .contact__form-el {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .contact__form-el:focus {
-    background-color: #f2f2f2;
-  }
-  
-  .contact__form-el--submit {
-    background-color: #e44d26;
-    color: #fff;
-    cursor: pointer;
-    width: auto; /* Adjust width as needed */
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .contact__form-el--submit:hover {
-    background-color: #333;
-  }
-  
-  /* ... existing CSS code ... */
   
