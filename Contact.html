@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Contact</title>
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/functions-min.js"></script>
 </head>
 <body>
   
@@ -21,27 +23,29 @@
     </nav>
   </header>
 
-     <!-- SECTION: Contact -->
-     <section id="contact" class="contact">
-      <h2 class="contact__heading title">Contact Me</h2>
-      <p>Contactez-moi pour toute collaboration</p>
-      <div class="contact__wrapper wrapper--large">
-        <div class="contact__visual">
-          <img src="img/khaled.png" alt="Visual Contact">
-        </div>
-        <!-- Simple form setup: formspree.io -->
-        <form class="contact__form">
-          <input class="contact__form-el contact__form-el--name" type="text" placeholder="Votre nom" spellcheck="false">
-          <input class="contact__form-el contact__form-el--email" type="email" placeholder="Votre mail" spellcheck="false">
-          <textarea class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
-          <input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
-        </form>
+  <!-- SECTION: Contact -->
+  <section id="contact" class="contact">
+    <h2 class="contact__heading title">Contact Me</h2>
+    <p>Contactez-moi pour toute collaboration</p>
+    <div class="contact__wrapper wrapper--large">
+      <div class="contact__visual">
+        <img src="img/khaled.png" alt="Visual Contact">
       </div>
-    </section>
-    <!-- END SECTION: Contact -->
-  </main>
+      <!-- Simple form setup: formspree.io -->
+      <form id="contact-form" class="contact__form">
+        <input id="name" class="contact__form-el contact__form-el--name" type="text" placeholder="Votre nom" spellcheck="false">
+        <input id="email" class="contact__form-el contact__form-el--email" type="email" placeholder="Votre mail" spellcheck="false">
+        <textarea id="message" class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
+        <input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
+      </form>
 
-  
+      <!-- Success and error message elements -->
+      <div id="success-message" class="contact__message"></div>
+      <div id="error-message" class="contact__message"></div>
+    </div>
+  </section>
+  <!-- END SECTION: Contact -->
+
   <!-- SECTION: Footer -->
   <footer class="footer">
     <div class="footer__wrapper wrapper--large">

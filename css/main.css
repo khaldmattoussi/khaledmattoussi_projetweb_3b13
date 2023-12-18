@@ -141,6 +141,14 @@ a {
   margin-bottom: 20px;
 }
 
+.about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add rounded corners to the images */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  margin-bottom: 20px; /* Add some space between images */
+}
+
 /* Work Section */
 .work {
   text-align: center;
@@ -161,13 +169,98 @@ a {
 .work img {
   max-width: 100%;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 5px 30px rgba(0,0,0,0.15);
-  transition: transform .3s ease;
+  border-radius: 10px; /* Add rounded corners to the images */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  margin-bottom: 20px; /* Add some space between images */
 }
 
 .work img:hover {
   transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.contact__heading {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__visual img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  transition: transform .3s ease;
+}
+
+.contact__visual img:hover {
+  transform: translateY(-5px);
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.contact__form-el {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact__form-el--submit {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact__form-el--submit:hover {
+  background-color: #297fb8;
+}
+/* Add these styles for the success and error messages */
+/* Add these styles for the success and error messages */
+.contact__message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none; /* Initially hide the messages */
+}
+
+#success-message {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#error-message {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+
+
+/* Center the project pictures within the slideshow */
+.slideshow img {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Footer */
@@ -198,7 +291,7 @@ a {
     margin: 10px 0;
   }
 
-  .presentation img, .work img {
+  .presentation img, .work img, .contact__visual img {
     border-radius: 10px;
   }
 
@@ -236,6 +329,51 @@ a {
   animation-delay: 1.5s;
 }
 
-.footer {
+.contact {
   animation-delay: 2s;
+}
+
+.footer {
+  animation-delay: 2.5s;
+}
+
+/* Add these styles for the slideshow section */
+.slideshow {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#slideshow-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+#slideshow-image:hover {
+  transform: translateY(-5px);
+}
+
+#prev-button,
+#next-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#prev-button:hover,
+#next-button:hover {
+  background-color: #297fb8;
+}
+
+/* Center the project pictures within the slideshow */
+.slideshow img {
+  display: block;
+  margin: 0 auto;
 }
